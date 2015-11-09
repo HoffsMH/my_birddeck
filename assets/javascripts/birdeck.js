@@ -25,7 +25,7 @@ $(document).ready(function () {
       url: "https://turing-birdie.herokuapp.com/api/v1/posts.json",
       data: postParams,
       success: function(posts) {
-        thing1();
+        fetch_post();
         $('#post-description').val('')
 
       }
