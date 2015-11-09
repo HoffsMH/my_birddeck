@@ -12,11 +12,12 @@ $(document).ready(function () {
     }
   });
   $('#create-post').on('click',  function () {
-    var description = $('post-description').val
+    var postDescription = $('post-description').val
+    var postParams  = { post: {description: postDescription}}
     $.ajax({
       type: 'POST',
       url: "https://turing-birdie.herokuapp.com/api/v1/posts.json",
-      parameters: description
+      data: postParams
       success: function() { console.log('winter is coming') }
     });
   })
